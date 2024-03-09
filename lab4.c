@@ -12,7 +12,7 @@ int main() {
     printf("c = ");
     scanf("%lf", &c);
 
-    if (a + b > c && a + c > b && b + c > a) {
+    if (checkT(a, b, c)) {
         double perimeter = calculateP(a, b, c);
         double area = calculateS(a, b, c);
 
