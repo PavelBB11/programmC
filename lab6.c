@@ -2,7 +2,7 @@
 
 int main() {
     FILE *inputFile, *outputFile;
-    char firstName[50], lastName[50], middleName[50];
+    char firstName[20], lastName[20], middleName[20];
     int year;
 
     inputFile = fopen("people.txt", "w");
