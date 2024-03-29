@@ -1,4 +1,4 @@
-//matrix_operations.h
+///matrix_operations.h
 
 #ifndef MATRIX_OPERATIONS_H 
 #define MATRIX_OPERATIONS_H 
