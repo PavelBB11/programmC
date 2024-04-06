@@ -13,7 +13,7 @@ int main() {
     fprintf(inputFile, "Иванов Петр Сергеевич 1975\n");
     fprintf(inputFile, "Сидоров Николай Андреевич 1981\n");
     fprintf(inputFile, "Воробьянинов Ипполит Матвеевич 1978\n");
-    // Добавить остальные записи с именами и годами рождения
+    // ...
     fclose(inputFile);
 
     inputFile = fopen("people.txt", "r");
