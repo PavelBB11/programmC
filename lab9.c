@@ -3,31 +3,29 @@
 #include <stdlib.h>
 
 int main() {
-    char expression[100];
-    printf("Введите арифметическое выражение: ");
-    fgets(expression, 100, stdin);
+    char input[100];
+    printf("Введите выражение для вычисления: ");
+    fgets(input, 100, stdin);
 
-    char* token = strtok(expression, " ");
-    double result = 0;
-    int isUnary = 1;  
+    char *token = strtok(input, " ");
+    float result = 0;
+    char operator = '+';
 
     while (token != NULL) {
-        if (strcmp(token, "+") == 0) {
-            isUnary = 0;  
-        } else if (strcmp(token, "-") == 0) {
-            isUnary = 0;  
+        if (token[0] == '+' || token[0] == '-') {
+            operator = token[0];
         } else {
-            double number = atof(token);
-            if (isUnary) {
-                result = number;  
-            } else {
-                result = (expression[0] == '+') ? result + number : result - number;  
+            float number = strtof(token, NULL);
+            if (operator == '+') {
+                result += number;
+            } else if (operator == '-') {
+                result -= number;
             }
-            isUnary = 1;  
         }
         token = strtok(NULL, " ");
     }
 
-    printf("Результат: %lf\n", result);
+    printf("Результат: %f\n", result);
+
     return 0;
 }
